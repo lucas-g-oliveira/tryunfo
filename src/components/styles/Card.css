@@ -1,0 +1,25 @@
+#section-Card{
+    align-items: center;
+    display: flex;
+    height: 700px;
+    width: 400px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgb(46, 45, 45);
+    border-radius: 20px;
+    padding: 20px;
+    color: antiquewhite;
+}
+
+h2{
+    color: antiquewhite;
+    border: solid 3px red;
+    padding: 2px;
+}
+
+img{
+    width: 395px;
+    height: 395px;
+    border: solid 1px white;
+    border-radius: 10px;
+}
