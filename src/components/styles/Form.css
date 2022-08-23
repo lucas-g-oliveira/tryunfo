@@ -21,6 +21,7 @@ label{
 textarea ,input{
     width: 350px;
     border-radius: 5px;
+    background-color: antiquewhite;
 }
 
 textarea{
@@ -30,25 +31,35 @@ textarea{
 input{
     border-radius: 5px;
     height: 30px;
+    background-color: antiquewhite;
 }
 
 #form-select{
     width: 200px;
     height: 30px;
+    background-color: antiquewhite;
 }
 
 #form-select{
     border-radius: 5px;
     margin-left: 5px;
+    background-color: antiquewhite;
 }
 
 #form-check{
     width: 20px;
     margin-right: 5px;
+    background-color: antiquewhite;
 }
 #check-label, #select-label{
     justify-content: center;
     align-items: center;
+}
+
+#check-label{
+    width: 150px;
+    border: solid 1px white;
+    border-radius: 10px;
 }
 
 #form-button{
@@ -59,4 +70,3 @@ input{
     width: 140px;
     font-size: 20px;
 }
-
