@@ -65,7 +65,7 @@ class Card extends React.Component {
           Raridade
           <h3 data-testid="rare-card">{cardRare}</h3>
         </div>
-        <div className="cartaRara">
+        <div data-testid="trunfo-card" className="cartaRara">
           Super Trunfo
         </div>
       </div>

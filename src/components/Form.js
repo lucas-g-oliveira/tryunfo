@@ -15,8 +15,8 @@ class Form extends React.Component {
       cardTrunfo,
       /*
       hasTrunfo,
-      isSaveButtonDisabled,
       */
+      isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
     } = this.props;
@@ -103,9 +103,9 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="rare-input"
           >
-            <option value="Normal">Normal</option>
-            <option value="Rara">Raro</option>
-            <option value="Muito Rara">Muito raro</option>
+            <option value="normal">Normal</option>
+            <option value="raro">Raro</option>
+            <option value="muito raro">Muito raro</option>
           </select>
         </label>
         <label id="check-label" htmlFor="form-check">
@@ -119,10 +119,11 @@ class Form extends React.Component {
           />
           Super Trunfo
         </label>
+
         <button
           type="button"
           id="form-button"
-          disabled={ cardTrunfo }
+          disabled={ isSaveButtonDisabled }
           name="cardTrunfo"
           onClick={ onSaveButtonClick }
           data-testid="save-button"
@@ -143,10 +144,8 @@ Form.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  /*
-  hasTrunfo: PropTypes.bool.isRequired,
+  /* hasTrunfo: PropTypes.bool.isRequired, */
   isSaveButtonDisabled: PropTypes.bool.isRequired,
-  */
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
 };

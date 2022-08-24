@@ -14,20 +14,17 @@ class App extends React.Component {
     cardRare: 'raridade',
     cardTrunfo: false,
     hasTrunfo: false,
-    isSaveButtonDisabled: false,
+    isSaveButtonDisabled: true,
   };
 
   onInputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-    /*
-        //console.log(`[${name}]:${value}`);
-        //console.log(this.state);
-        */
+    const { name, value, checked } = event.target;
+    const atributo = (name === 'cardTrunfo') ? checked : value;
+    this.setState({ [name]: atributo });
   };
 
   onSaveButtonClick = () => {
-    console.log('onSaveButtonClich');
+    console.log('iei');
   };
 
   render() {
