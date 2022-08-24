@@ -1,51 +1,53 @@
-#section-Card{
-    align-items: center;
-    display: flex;
-    height: 700px;
-    width: 380px;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: rgb(46, 45, 45);
-    border-radius: 20px;
-    padding: 20px;
-    color: antiquewhite;
-    margin-left: 5px;
+/*
+#section-Card {
+  align-items: center;
+  display: flex;
+  height: 700px;
+  width: 380px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: rgb(46, 45, 45);
+  border-radius: 20px;
+  padding: 20px;
+  color: antiquewhite;
+  margin-left: 5px;
 }
 
-h2{
-    color: antiquewhite;
-    padding: 1px;
+h2 {
+  color: antiquewhite;
+  padding: 1px;
 }
 
-img{
-    width: 395px;
-    height: 395px;
-    border: solid 1px white;
-    border-radius: 10px;
+img {
+  width: 395px;
+  height: 395px;
+  border: solid 1px white;
+  border-radius: 10px;
 }
 
-.divAtributo{
-    margin: 5px;
-    width: 97%;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    border: solid wheat 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+.divAtributo {
+  margin: 5px;
+  width: 97%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: solid wheat 1px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#description-card{
-    float: initial;
-    color: black;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    margin: 5px;
-    width: 390px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#description-card {
+  float: initial;
+  color: black;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin: 5px;
+  width: 390px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+*/
