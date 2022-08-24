@@ -14,8 +14,7 @@
 
 h2{
     color: antiquewhite;
-    border: solid 3px red;
-    padding: 2px;
+    padding: 1px;
 }
 
 img{
@@ -36,4 +35,17 @@ img{
     border: solid wheat 1px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#description-card{
+    float: initial;
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin: 5px;
+    width: 390px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
