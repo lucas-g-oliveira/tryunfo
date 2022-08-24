@@ -14,8 +14,8 @@ class Card extends React.Component {
             cardRare,
             cardTrunfo,
         } = this.props;
-        
-        if(!cardTrunfo){
+
+        if (!cardTrunfo) {
             return (
                 <div id="section-Card">
                     <h2 data-testid="name-card">{cardName}</h2>
@@ -36,42 +36,42 @@ class Card extends React.Component {
                         <h3 data-testid="attr3-card">{cardAttr3}</h3>
                     </div>
                     <div className="cartaRara">
-                        Carta rara
+                        Raridade
                         <h3 data-testid="rare-card">{cardRare}</h3>
                     </div>
                 </div>
             );
-        }else{
-        
-        return (
-            <div id="section-Card">
-                <h2 data-testid="name-card">{cardName}</h2>
-                <img alt={cardName} data-testid="image-card" src={cardImage} />
-                <div>
-                    <p data-testid="description-card">{cardDescription}</p>
+        } else {
+
+            return (
+                <div id="section-Card">
+                    <h2 data-testid="name-card">{cardName}</h2>
+                    <img alt={cardName} data-testid="image-card" src={cardImage} />
+                    <div>
+                        <p data-testid="description-card">{cardDescription}</p>
+                    </div>
+                    <div className="divAtributo">
+                        Atributo1
+                        <h3 data-testid="attr1-card">{cardAttr1}</h3>
+                    </div>
+                    <div className="divAtributo">
+                        Atributo2
+                        <h3 data-testid="attr2-card">{cardAttr2}</h3>
+                    </div>
+                    <div className="divAtributo">
+                        Atributo3
+                        <h3 data-testid="attr3-card">{cardAttr3}</h3>
+                    </div>
+                    <div className="divAtributo">
+                        Raridade
+                        <h3 data-testid="rare-card">{cardRare}</h3>
+                    </div>
+                    <div className="cartaRara">
+                        Super Trunfo
+                        <h3 data-testid="trunfo-card">Super Trunfo</h3>
+                    </div>
                 </div>
-                <div className="divAtributo">
-                    Atributo1
-                    <h3 data-testid="attr1-card">{cardAttr1}</h3>
-                </div>
-                <div className="divAtributo">
-                    Atributo2
-                    <h3 data-testid="attr2-card">{cardAttr2}</h3>
-                </div>
-                <div className="divAtributo">
-                    Atributo3
-                    <h3 data-testid="attr3-card">{cardAttr3}</h3>
-                </div>
-                <div className="cartaRara">
-                    Carta rara
-                    <h3 data-testid="rare-card">{cardRare}</h3>
-                </div>
-                <div className="cartaRara">
-                    Super Trunfo
-                    <h3 data-testid="trunfo-card">Super Trunfo</h3>
-                </div>
-            </div>
-        );
+            );
         }
     }
 }
