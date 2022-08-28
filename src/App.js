@@ -94,7 +94,7 @@ class App extends React.Component {
   onInputChange = async (event) => {
     const { name, value, checked } = event.target;
     const atributo = (name === 'cardTrunfo') ? checked : value;
-    this.setState({ [name]: atributo }, this.updateButton());
+    this.setState({ [name]: atributo }, this.updateButton);
   };
 
   fxNewCard = () => {
@@ -141,8 +141,9 @@ class App extends React.Component {
           cardTrunfo: false,
         }
       ),
-      this.updateButton(),
+      this.updateButton,
     );
+    this.render();
   };
 
   deleteCard = (event) => {
@@ -152,7 +153,9 @@ class App extends React.Component {
     console.log(event.target.name);
     this.setState({
       cards: listTemp.filter((e) => e.cardName !== name),
-    }, () => this.updateButton());
+    }, () => {
+      this.setState({ hasTrunfo: cards.some((e) => e.cardTrunfo === true) });
+    });
   };
 
   render() {
