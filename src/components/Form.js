@@ -3,7 +3,6 @@ import './styles/Form.css';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
-
   render() {
     const {
       cardName,
@@ -20,15 +19,40 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
 
+    const ifHasTrunf = (hasTrunfo) ? (
+      <div
+        key={ `${Math.random()}` }
+        id="check-label"
+        htmlFor="form-check"
+        data-testid="trunfo-input"
+      >
+        Você já tem um Super Trunfo em seu baralho
+      </div>
+    ) : (
+      <label id="check-label" htmlFor="form-check">
+        <input
+          key={ `${Math.random()}` }
+          id="form-check"
+          type="checkbox"
+          checked={ cardTrunfo }
+          disabled={ hasTrunfo }
+          name="cardTrunfo"
+          onChange={ onInputChange }
+          data-testid="trunfo-input"
+        />
+        Super Trunfo
+      </label>
+    );
+
     return (
       <div id="section-form">
         <label htmlFor="form-name">
           Nome:
           <input
             id="form-name"
-            value={cardName}
+            value={ cardName }
             name="cardName"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             type="text"
             data-testid="name-input"
             placeholder="nome"
@@ -38,9 +62,9 @@ class Form extends React.Component {
           Descrição:
           <textarea
             id="form-textarea"
-            value={cardDescription}
+            value={ cardDescription }
             name="cardDescription"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             data-testid="description-input"
             placeholder="descrição"
           />
@@ -49,10 +73,10 @@ class Form extends React.Component {
           Atr1
           <input
             id="form-at1"
-            value={cardAttr1}
+            value={ cardAttr1 }
             name="cardAttr1"
             type="number"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             data-testid="attr1-input"
             placeholder="Atributo1"
           />
@@ -61,10 +85,10 @@ class Form extends React.Component {
           Atr2
           <input
             id="form-at2"
-            value={cardAttr2}
+            value={ cardAttr2 }
             name="cardAttr2"
             type="number"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             data-testid="attr2-input"
             placeholder="Atributo2"
           />
@@ -73,10 +97,10 @@ class Form extends React.Component {
           Atr3
           <input
             id="form-at3"
-            value={cardAttr3}
+            value={ cardAttr3 }
             name="cardAttr3"
             type="number"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             data-testid="attr3-input"
             placeholder="Atributo3"
           />
@@ -85,9 +109,9 @@ class Form extends React.Component {
           Link image:
           <input
             id="form-imginput"
-            value={cardImage}
+            value={ cardImage }
             name="cardImage"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             type="text"
             data-testid="image-input"
             placeholder="imageLink"
@@ -97,9 +121,9 @@ class Form extends React.Component {
           Raridade:
           <select
             id="form-select"
-            value={cardRare}
+            value={ cardRare }
             name="cardRare"
-            onChange={onInputChange}
+            onChange={ onInputChange }
             data-testid="rare-input"
           >
             <option value="normal">Normal</option>
@@ -107,25 +131,13 @@ class Form extends React.Component {
             <option value="muito raro">Muito raro</option>
           </select>
         </label>
-        <label id="check-label" htmlFor="form-check">
-          <input
-            id="form-check"
-            type="checkbox"
-            checked={cardTrunfo}
-            disabled={hasTrunfo}
-            name="cardTrunfo"
-            onChange={onInputChange}
-            data-testid="trunfo-input"
-          />
-          Super Trunfo
-        </label>
-
+        {[ifHasTrunf]}
         <button
           type="button"
           id="form-button"
-          disabled={isSaveButtonDisabled}
+          disabled={ isSaveButtonDisabled }
           name="cardTrunfo"
-          onClick={onSaveButtonClick}
+          onClick={ onSaveButtonClick }
           data-testid="save-button"
         >
           Salvar

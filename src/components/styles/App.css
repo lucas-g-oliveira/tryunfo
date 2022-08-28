@@ -1,4 +1,30 @@
-.parent-omponents-div {
+/* .parent-omponents-div {
   display: flex;
-  justify-content: space-around;
 }
+
+CardsColections {
+  background-color: blue;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  width: 100;
+}
+
+#close-button{
+  display: flex;
+  float: left;
+  flex-direction: column;
+  position: relative;
+  left: 415px;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 30%;
+  border: none;
+  background-color: rgb(46, 45, 45);
+  color: red;
+  z-index: 0;
+  
+} */
