@@ -69,7 +69,6 @@ class App extends React.Component {
     listResult.push(cardImage !== '');
     listResult.push(this.validAtbr());
     listResult.push(!cards.some((e) => e.cardName === cardName));
-    console.log(!cards.some((e) => e.cardName === cardName));
     const exit = !listResult.every((e) => e === true);
 
     return exit;
