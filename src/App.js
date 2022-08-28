@@ -42,7 +42,7 @@ class App extends React.Component {
     if (att === '') {
       results.pass = false;
       results.value = 0;
-      results.msg = 'Valor min: 1, max: 90!';
+      results.msg = 'Valor min: 0, max: 90!';
     } else {
       results.pass = (att >= min && att <= max);
       results.value = parseInt(att, 10);
