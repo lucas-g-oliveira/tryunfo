@@ -12,6 +12,7 @@ class CardsColections extends React.Component {
       >
         <button
           type="button"
+          name={ e.cardName }
           id="close-button"
           data-testid="delete-button"
           onClick={ deleteCard }

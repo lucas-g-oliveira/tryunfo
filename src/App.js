@@ -19,22 +19,6 @@ class App extends React.Component {
     cards: [],
   };
 
-  /* strOptions = ({ str, removeSpaces = false, upper = false, lower = false }) => {
-    let value = '';
-    let temp = '';
-    if (removeSpaces) {
-      for (let i = 0; i < str.length(); i += 1) {
-        value += (str[i] === ' ') ? '_' : str[i];
-      }
-    }
-    console.log(`value: ${value} str: ${str}`);
-    temp = value;
-    value = (upper) ? value.toUpperCase() : value;
-    value = (lower) ? value.toLocaleLowerCase() : value;
-    value = (upper && lower) ? temp : value;
-    return value;
-  } */
-
   validUnit = (att) => {
     const max = 90;
     const min = 0;
@@ -48,7 +32,6 @@ class App extends React.Component {
       results.value = parseInt(att, 10);
       results.msg = (results.pass) ? '' : 'Valor fora do intervalo permitido';
     }
-    console.log(results);
     return results;
   };
 
@@ -111,7 +94,7 @@ class App extends React.Component {
   onInputChange = async (event) => {
     const { name, value, checked } = event.target;
     const atributo = (name === 'cardTrunfo') ? checked : value;
-    this.setState({ [name]: atributo }, this.updateButton);
+    this.setState({ [name]: atributo }, this.updateButton());
   };
 
   fxNewCard = () => {
@@ -127,11 +110,6 @@ class App extends React.Component {
     } = this.state;
 
     const newCard = {
-      /*  key: this.strOptions({
-         str: cardName,
-         removeSpaces: true,
-         lower: true,
-       }), */
       cardName,
       cardDescription,
       cardAttr1,
@@ -163,9 +141,18 @@ class App extends React.Component {
           cardTrunfo: false,
         }
       ),
-      this.updateButton,
+      this.updateButton(),
     );
-    this.render();
+  };
+
+  deleteCard = (event) => {
+    const { cards } = this.state;
+    const { name } = event.target;
+    const listTemp = cards;
+    console.log(event.target.name);
+    this.setState({
+      cards: listTemp.filter((e) => e.cardName !== name),
+    }, () => this.updateButton());
   };
 
   render() {
@@ -205,7 +192,7 @@ class App extends React.Component {
           />
 
           <Card
-            key="123456789"
+            key={ Math.random() }
             cardName={ cardName }
             cardDescription={ cardDescription }
             cardAttr1={ cardAttr1 }
