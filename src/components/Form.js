@@ -19,31 +19,6 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
 
-    const ifHasTrunf = (hasTrunfo) ? (
-      <div
-        key={ `${Math.random()}` }
-        id="check-label"
-        htmlFor="form-check"
-        data-testid="trunfo-input"
-      >
-        Você já tem um Super Trunfo em seu baralho
-      </div>
-    ) : (
-      <label id="check-label" htmlFor="form-check">
-        <input
-          key={ `${Math.random()}` }
-          id="form-check"
-          type="checkbox"
-          checked={ cardTrunfo }
-          disabled={ hasTrunfo }
-          name="cardTrunfo"
-          onChange={ onInputChange }
-          data-testid="trunfo-input"
-        />
-        Super Trunfo
-      </label>
-    );
-
     return (
       <div id="section-form">
         <label htmlFor="form-name">
@@ -131,7 +106,31 @@ class Form extends React.Component {
             <option value="muito raro">Muito raro</option>
           </select>
         </label>
-        {[ifHasTrunf]}
+
+        {(hasTrunfo) ? (
+          <div
+            key={ `${Math.random()}` }
+            id="check-label"
+            data-testid="trunfo-input"
+          >
+            <p>Você já tem um Super Trunfo em seu baralho</p>
+          </div>
+        ) : (
+          <label id="check-label" htmlFor="form-check">
+            <input
+              key={ `${Math.random()}` }
+              id="form-check"
+              type="checkbox"
+              checked={ cardTrunfo }
+              disabled={ hasTrunfo }
+              name="cardTrunfo"
+              onChange={ onInputChange }
+              data-testid="trunfo-input"
+            />
+            Super Trunfo
+          </label>
+        )}
+
         <button
           type="button"
           id="form-button"

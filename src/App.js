@@ -44,13 +44,11 @@ class App extends React.Component {
       results.value = 0;
       results.msg = 'Valor min: 1, max: 90!';
     } else {
-      results.pass = (att > min && att <= max);
+      results.pass = (att >= min && att <= max);
       results.value = parseInt(att, 10);
       results.msg = (results.pass) ? '' : 'Valor fora do intervalo permitido';
     }
-    if (Number(att) < 0) {
-      this.setState({ isSaveButtonDisabled: true });
-    }
+    console.log(results);
     return results;
   };
 
