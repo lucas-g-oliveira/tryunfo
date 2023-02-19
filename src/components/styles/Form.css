@@ -1,13 +1,14 @@
-/* #section-form {
+ #section-form {
   align-items: center;
   display: flex;
-  height: 700px;
+  height: 450px;
   width: 500px;
   justify-content: space-evenly;
   flex-direction: column;
   background-color: rgb(46, 45, 45);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 20%;
+  padding: 30px;
+  margin: 10px;
 }
 
 label {
@@ -57,10 +58,13 @@ input {
 #select-label {
   justify-content: center;
   align-items: center;
+  color: antiquewhite;
 }
 
 #check-label {
-  width: 150px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
   border: solid 1px white;
   border-radius: 10px;
 }
@@ -76,4 +80,4 @@ input {
 
 #hasTrunfo{
   color: antiquewhite;
-} */
+}

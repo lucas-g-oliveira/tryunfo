@@ -17,6 +17,7 @@ class App extends React.Component {
     hasTrunfo: false,
     isSaveButtonDisabled: true,
     cards: [],
+    filter: [],
   };
 
   validUnit = (att) => {
@@ -72,6 +73,23 @@ class App extends React.Component {
     const exit = !listResult.every((e) => e === true);
 
     return exit;
+  };
+
+  onChangeFilterCards = (event) => {
+    const { cards } = this.state;
+    const { name, value, checked } = event.target;
+    console.log(`${name} ${value} ${checked}`);
+    this.setState({ filter: [] });
+    if (name === 'name') {
+      this.setState({ filter: cards.map((e) => e.cardName === value) });
+    }
+    if (name === 'trunfo') {
+      this.setState({ filter: (checked)
+        ? cards.map((e) => e.cardRare === true) : cards });
+    }
+    if (name === 'rare') {
+      this.setState({ filter: cards.map((e) => e.cardRare === value) });
+    }
   };
 
   updateButton = () => {
@@ -172,6 +190,7 @@ class App extends React.Component {
       isSaveButtonDisabled,
       hasTrunfo,
       cards,
+      filter,
     } = this.state;
 
     return (
@@ -205,8 +224,9 @@ class App extends React.Component {
             cardTrunfo={ cardTrunfo }
           />
           <CardsColections
-            cards={ cards }
+            cards={ (filter.length > 0) ? filter : cards }
             deleteCard={ this.deleteCard }
+            onChangeFilterCards={ this.onChangeFilterCards }
           />
         </div>
       </div>

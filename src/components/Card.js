@@ -19,7 +19,7 @@ class Card extends React.Component {
       <div
         data-testid="trunfo-card"
         className="cartaRara"
-        key="789456123"
+        key={ Math.random() }
       >
         Super Trunfo
       </div>];
